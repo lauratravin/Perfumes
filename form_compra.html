@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">        
+        <meta name="author" content="Perfumes">
+        <meta name="description" content="Perfumes">
+        <link rel="stylesheet" type="text/css"  href="style-flex.css">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Perfumes</title>           
+        
+    </head>
+<body>    
+   <h1>Contacto</h1> 
+    
+        <form action="sendmail.php"   method="post" class="form_contacto">
+                 <div id='formtext'>
+                    <label for="perfume">Perfume</label><br/>
+                    <input type="text" id="myperfume" name="myperfume"/><br/>
+                    <label for="myname">Tu Nombre</label><br/>
+                    <input type="text" id="myname"  name="myname" required="required" placeholder="nombre"/><br/>
+                   
+                    <label for="Tu mail">Tu mail</label><br/>
+                    <input type="email" id="mymail"  name="mymail" required="required" placeholder="mail"/><br/>
+                    <!-- <div class="formbutton"> -->
+                      <!-- <input type="submit" value='Enviar' class="formbutton" /> -->
+                      <button type="submit" name="submit" >Enviar</button>
+                    <!-- </div> -->
+                    
+                </div>
+
+
+        </form>
+   
+
+
+    </body>   
+<script>
+            function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+            var number = getUrlVars()["perfume"];
+           document.getElementById("myperfume").value= unescape(number);
+
+</script> 
+
+
+
+</html>
